@@ -1,0 +1,10 @@
+{
+    "projects": [
+        {
+            "logo": "https://github.com/valdersonjr/valdersonjr/assets/65057466/d0c23aa1-0ecc-49db-89a0-5c153ca1463a",
+            "name": "Receitalista",
+            "descriptions": ["O Receitalista é um projeto criado no âmbito do curso de Engenharia de Requisitos, com o principal objetivo de auxiliar os usuários na gestão de estoque, gastos e lucros. Um dos principais diferenciais desse projeto é sua abordagem amigável, que não exige conhecimento técnico do usuário, além de ser totalmente gratuito. Além disso, o Receitalista fornece ao usuário relatórios financeiros periódicos, consolidando todas as informações registradas.", "Durante o desenvolvimento do projeto, eu e minha equipe fomos responsáveis por todas as etapas, desde a definição inicial até a construção final. Além disso, a equipe teve a responsabilidade de estabelecer e seguir um processo de desenvolvimento adequado."],
+            "link": "https://github.com/mdsreq-fga-unb/2022.2-Receitalista"
+        }
+    ]
+}

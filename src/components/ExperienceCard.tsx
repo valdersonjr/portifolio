@@ -1,14 +1,5 @@
 import { motion } from 'framer-motion';
-
-type Props = { }
-
-interface IExperienceCard {
-    post: string;
-    company: string;
-    stack: string[];
-    startDate: string;
-    endDate?: string;
-}
+import { IExperienceCard } from '@/model/DataView';
 
 export default function ExperienceCard(props: IExperienceCard) {
     return(
@@ -26,21 +17,18 @@ export default function ExperienceCard(props: IExperienceCard) {
                 <h4 className='text-4xl font-light'>{props.post}</h4>
                 <p className='font-bold text-2xl mt-1'>{props.company}</p>
                 <div className='flex space-x-2 my-2'>
-                    {props.stack.map((tech:string) => (
+                    {props.stackIconsLink.map((link:string) => (
                         <img 
-                            className='w-10 h-10 rounded-full' 
-                            src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png' 
+                            className='w-10 h-10' 
+                            src={link} 
                             alt='React Icon' />
                     ))}
                 </div>
                 <p className='uppercase py-5 text-gray-300'>{props.startDate} - {props.endDate ? props.endDate : "Emprego Atual"}</p>
 
                 <ul className='list-disc space-y-4 ml-5 text-lg'>
-                    <li>Summary</li>
-                    <li>Summary</li>
-                    <li>Summary</li>
-                    <li>Summary</li>
-                    <li>Summary</li>
+                    {props.summary.map((summarySection) => (<li>{summarySection}</li>))}
+                    {props.linkProjeto && (<li><a target='_blank' className='hover:text-[#F7AB0A]/40 decoration-[F7AB0A]/50 underline'>{props.linkProjeto}</a></li>)}
                 </ul>
             </div>
         </article>
