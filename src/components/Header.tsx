@@ -45,10 +45,13 @@ export default function Header({header}: Props) {
             network="email"
             fgColor="gray"
             bgColor="transparent"
-        />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
-          <Link href="#contact">Entrar em Contato</Link>
-        </p>
+          />
+        <Link href="#contact">
+          
+          <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+            Entrar em Contato
+          </p>
+        </Link>
       </motion.div>
     </header>
   );

@@ -37,7 +37,7 @@ export default function About({ aboutMe }: Props) {
                     <button onClick={() => setSelectedSection(Section.FACTS)} className={`px-2 md:px-6 py-2 border ${selectedSection === Section.FACTS ? "border-[#F7AB0A]/70 text-[#F7AB0A]/70" : "border-[#242424]"} rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-[#F7AB0A]/40 hover:text-[#F7AB0A]/40`}>Curiosidades</button>
                 </div>
                 
-                <div className="space-y-4 px-0 md:px-10 -mt-32 md:-mt-0">
+                <div className="space-y-4 px-0 md:px-10  md:-mt-0">
                     {selectedSection === Section.ABOUT && (<><h4 className="text-2xl md:text-4xl font-semibold"> Um pouco sobre mim... </h4> <p> {aboutMe?.aboutMeText} </p></>)}
                     {selectedSection === Section.FACTS && (<><h4 className="text-2xl md:text-4xl font-semibold">Curiosidades</h4><ul className="space-y-2 list-decimal pl-4">{aboutMe?.facts.map((fact, i) => <li key={i}>{fact}</li>)}</ul></>)}
                 </div>
