@@ -14,7 +14,7 @@ export default function Projects({ projects }: Props) {
                 {projects && projects.map((project, i) => (
                     <div key={i} className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
                         <motion.img
-                            className="w-80 h-80"
+                            className="w-40 h-40 md:w-60 md:h-60 lg:w-80 lg:h-80"
                             initial={{ y: -300, opacity: 0 }}
                             transition={{ duration: 1.2 }}
                             whileInView={{ opacity:1, y:0 }}
