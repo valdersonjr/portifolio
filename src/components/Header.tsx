@@ -18,8 +18,9 @@ export default function Header({header}: Props) {
         transition={{ duration: 1.5 }}
         className="flex flex-row items-center"
       >
-        {header && header.socials.length > 0 && header.socials.map((social) => (
+        {header && header.socials.length > 0 && header.socials.map((social, i) => (
             <SocialIcon 
+              key={i}
               target="_blank"
               url={social}
               fgColor="gray"

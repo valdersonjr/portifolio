@@ -36,7 +36,7 @@ export default function About({ aboutMe }: Props) {
                         Curiosidades
                     </h4>
                     <ul className="space-y-2 list-decimal pl-4">
-                        {aboutMe?.facts.map((fact) => <li>{fact}</li>)}
+                        {aboutMe?.facts.map((fact, i) => <li key={i}>{fact}</li>)}
                     </ul>
                 </div>
                 

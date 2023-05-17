@@ -6,6 +6,7 @@ export interface IExperienceCard {
     startDate: string;
     endDate?: string;
     linkProjeto?: string[];
+    companyLogo:string;
 }
 
 export interface IAbout {

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { ExperienceCard } from '.';
-import { useEffect, useState } from 'react';
+import React from 'react';
 import { IExperienceCard } from '@/model/DataView';
 
 type Props = {
@@ -21,14 +21,18 @@ export default function WorkExperience({ experiences }: Props) {
             </h3>
 
             <div className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
-                {experiences && experiences.map((experience) => (
-                    <ExperienceCard post={experience.post} 
-                        company={experience.company} 
-                        stackIconsLink={experience.stackIconsLink} 
-                        startDate={experience.startDate} 
-                        endDate={experience.endDate} 
-                        summary={experience.summary} 
-                        linkProjeto={experience.linkProjeto} /> 
+                {experiences && experiences.map((experience, i) => (
+                    <React.Fragment key={i}>
+                        <ExperienceCard
+                            post={experience.post} 
+                            company={experience.company} 
+                            stackIconsLink={experience.stackIconsLink} 
+                            startDate={experience.startDate} 
+                            endDate={experience.endDate} 
+                            summary={experience.summary} 
+                            linkProjeto={experience.linkProjeto} 
+                            companyLogo={experience.companyLogo} /> 
+                    </React.Fragment>
                 ))}
             </div>
         </motion.div>

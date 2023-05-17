@@ -1,6 +1,12 @@
 {
     "projects": [
         {
+            "logo": "https://github.com/valdersonjr/valdersonjr/assets/65057466/05bb5615-d10f-4303-ac9c-734d3e7f177e",
+            "name": "(Atual página)",
+            "descriptions": ["Esse projeto tem como objetivo mostrar minhas habilidades e experiências de forma criativa e fácil de entender. Por meio dele, pretendo apresentar de maneira clara e envolvente o que sou capaz de fazer, destacando meus talentos e competências.", "Tecnologias utilizadas em sua criação: Next.Js, React, Typescript, TailwindCSS, Framer Motion"],
+            "link": "https://github.com/valdersonjr/portifolio"
+        },
+        {
             "logo": "https://github.com/valdersonjr/valdersonjr/assets/65057466/d0c23aa1-0ecc-49db-89a0-5c153ca1463a",
             "name": "Receitalista",
             "descriptions": ["O Receitalista é um projeto criado no âmbito do curso de Engenharia de Requisitos, com o principal objetivo de auxiliar os usuários na gestão de estoque, gastos e lucros. Um dos principais diferenciais desse projeto é sua abordagem amigável, que não exige conhecimento técnico do usuário, além de ser totalmente gratuito. Além disso, o Receitalista fornece ao usuário relatórios financeiros periódicos, consolidando todas as informações registradas.", "Durante o desenvolvimento do projeto, eu e minha equipe fomos responsáveis por todas as etapas, desde a definição inicial até a construção final. Além disso, a equipe teve a responsabilidade de estabelecer e seguir um processo de desenvolvimento adequado."],

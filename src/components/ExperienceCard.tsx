@@ -9,16 +9,17 @@ export default function ExperienceCard(props: IExperienceCard) {
                 transition={{ duration: 1.2 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
-                className='w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center' 
-                src='../../assets/bentoLogo.png' 
+                className='w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-fill object-center ' 
+                src={props.companyLogo} 
                 alt='Bento Tecnologia logo' />
             
             <div className='px-0 md:px-10'>
                 <h4 className='text-4xl font-light'>{props.post}</h4>
                 <p className='font-bold text-2xl mt-1'>{props.company}</p>
                 <div className='flex space-x-2 my-2'>
-                    {props.stackIconsLink.map((link:string) => (
-                        <img 
+                    {props.stackIconsLink.map((link:string, i) => (
+                        <img
+                            key={i}
                             className='w-10 h-10' 
                             src={link} 
                             alt='React Icon' />
@@ -27,8 +28,8 @@ export default function ExperienceCard(props: IExperienceCard) {
                 <p className='uppercase py-5 text-gray-300'>{props.startDate} - {props.endDate ? props.endDate : "Emprego Atual"}</p>
 
                 <ul className='list-disc space-y-4 ml-5 text-lg'>
-                    {props.summary.map((summarySection) => (<li>{summarySection}</li>))}
-                    {props.linkProjeto && (<li><a target='_blank' className='hover:text-[#F7AB0A]/40 decoration-[F7AB0A]/50 underline'>{props.linkProjeto}</a></li>)}
+                    {props.summary.map((summarySection, i) => (<li key={i}>{summarySection}</li>))}
+                    {props.linkProjeto && (<li><a href='https://github.com/gpmc-lab-ufrgs/atlas' target='_blank' className='text-[#F7AB0A]/60 hover:text-[#F7AB0A] decoration-[F7AB0A]/50 underline'>Saber mais</a></li>)}
                 </ul>
             </div>
         </article>
