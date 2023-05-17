@@ -20,7 +20,7 @@ export default function Hero({ hero }: Props) {
             <img 
                 className="relative rounded-full h-32 w-32 mx-auto"
                 src={hero?.picture} 
-                alt="Image of Valderson" 
+                alt="Imagem de Valderson"
             />
             <div className="z-20">
                 <h2 className="text-sm uppercase text-gray-500 tracking-[15px]">
