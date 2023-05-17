@@ -1,11 +1,9 @@
-import { Html, Main, NextScript } from 'next/document'
-import Head from 'next/head'
+import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head >
-        Um pouco de mim! 😎
       </Head>
       <body>
         <Main />
