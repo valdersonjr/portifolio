@@ -1,5 +1,5 @@
 import { Hero, Header, About, WorkExperience, Skills, Projects, ContactMe } from "@/components";
-import { IAbout, IExperienceCard, IHeader, IHero, IProjects } from "@/model/DataView";
+import { IAbout, IExperienceCard, IHeader, IHero, IProjects, ISkills } from "@/model/DataView";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -7,6 +7,7 @@ export default function Home() {
   const [hero, setHero] = useState<IHero>();
   const [aboutMe, setAboutMe] = useState<IAbout>();
   const [experiences, setExperiences] = useState<IExperienceCard[]>([]);
+  const [skills, setSkills] = useState<ISkills[]>();
   const [projects, setProjects] = useState<IProjects[]>();
 
   useEffect(() => {
@@ -23,6 +24,10 @@ export default function Home() {
 
   useEffect(() => {
     fetch('/api/v1/experience').then((response) => response.json()).then((data) => setExperiences(data.experienceArray)).catch((err) => console.log(err));
+  }, []);
+  
+  useEffect(() => {
+    fetch('/api/v1/skills').then((response) => response.json()).then((data) => setSkills(data.skills)).catch((err) => console.log(err));
   }, []);
 
   useEffect(() => {
@@ -45,9 +50,9 @@ export default function Home() {
         <WorkExperience experiences={experiences} />
       </section>
 
-      {/* <section id="skills" className="snap-start">
-        <Skills />
-      </section> */}
+      <section id="skills" className="snap-start">
+        <Skills skills={skills}/>
+      </section>
 
       <section id="projects" className="snap-start">
         <Projects projects={projects} />

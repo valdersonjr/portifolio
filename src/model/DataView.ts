@@ -24,6 +24,11 @@ export interface IHeader {
     socials: string[];
 }
 
+export interface ISkills {
+    logo: string;
+    percentage: string;
+}
+
 export interface IProjects {
     logo: string;
     name: string;
